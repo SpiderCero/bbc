@@ -3,7 +3,7 @@ $onesync: on
 $steamRequired: true
 name: BCC-Scripts-AutoInstall
 author: BryceCanyonCounty
-description: Receta automática para instalar todos los scripts BCC desde BryceCanyonCounty
+description: Instalación automática de todos los scripts BCC desde BryceCanyonCounty
 
 variables:
   branch: "main"
@@ -12,19 +12,26 @@ variables:
   server_cfg_path: "server.cfg"
 
 tasks:
-  - action: run_command
-    name: Crear carpeta de recursos
-    command: |
-      mkdir -p ${install_path}
-
   ########################################
-  # Economía y sociedad
+  # Repositorios BCC
   ########################################
   - action: download_github
     name: bcc-banks
     src: "${bcc_repo_base}/bcc-banks"
     ref: "${branch}"
     dest: "${install_path}/bcc-banks"
+
+  - action: download_github
+    name: bcc-farming
+    src: "${bcc_repo_base}/bcc-farming"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-farming"
+
+  - action: download_github
+    name: bcc-vehiclefixes
+    src: "${bcc_repo_base}/bcc-vehiclefixes"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-vehiclefixes"
 
   - action: download_github
     name: bcc-shops
@@ -39,77 +46,11 @@ tasks:
     dest: "${install_path}/bcc-society"
 
   - action: download_github
-    name: bcc-userlog
-    src: "${bcc_repo_base}/bcc-userlog"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-userlog"
-
-  - action: download_github
-    name: bcc-stashes
-    src: "${bcc_repo_base}/bcc-stashes"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-stashes"
-
-  ########################################
-  # Jobs y actividades
-  ########################################
-  - action: download_github
-    name: bcc-farming
-    src: "${bcc_repo_base}/bcc-farming"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-farming"
-
-  - action: download_github
     name: bcc-ranch
     src: "${bcc_repo_base}/bcc-ranch"
     ref: "${branch}"
     dest: "${install_path}/bcc-ranch"
 
-  - action: download_github
-    name: bcc-law
-    src: "${bcc_repo_base}/bcc-law"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-law"
-
-  - action: download_github
-    name: bcc-robbery
-    src: "${bcc_repo_base}/bcc-robbery"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-robbery"
-
-  - action: download_github
-    name: bcc-camp
-    src: "${bcc_repo_base}/bcc-camp"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-camp"
-
-  - action: download_github
-    name: bcc-craft
-    src: "${bcc_repo_base}/bcc-craft"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-craft"
-
-  - action: download_github
-    name: bcc-nazar
-    src: "${bcc_repo_base}/bcc-nazar"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-nazar"
-
-  - action: download_github
-    name: bcc-housing
-    src: "${bcc_repo_base}/bcc-housing"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-housing"
-
-  - action: download_github
-    name: bcc-medical
-    src: "${bcc_repo_base}/bcc-medical"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-medical"
-
-  ########################################
-  # Transporte y vehículos
-  ########################################
   - action: download_github
     name: bcc-boats
     src: "${bcc_repo_base}/bcc-boats"
@@ -123,20 +64,11 @@ tasks:
     dest: "${install_path}/bcc-stables"
 
   - action: download_github
-    name: bcc-wagons
-    src: "${bcc_repo_base}/bcc-wagons"
+    name: bcc-law
+    src: "${bcc_repo_base}/bcc-law"
     ref: "${branch}"
-    dest: "${install_path}/bcc-wagons"
+    dest: "${install_path}/bcc-law"
 
-  - action: download_github
-    name: bcc-vehiclefixes
-    src: "${bcc_repo_base}/bcc-vehiclefixes"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-vehiclefixes"
-
-  ########################################
-  # Mundo y mapas
-  ########################################
   - action: download_github
     name: bcc-guarma
     src: "${bcc_repo_base}/bcc-guarma"
@@ -156,6 +88,66 @@ tasks:
     dest: "${install_path}/bcc-bin"
 
   - action: download_github
+    name: bcc-robbery
+    src: "${bcc_repo_base}/bcc-robbery"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-robbery"
+
+  - action: download_github
+    name: bcc-camp
+    src: "${bcc_repo_base}/bcc-camp"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-camp"
+
+  - action: download_github
+    name: bcc-stashes
+    src: "${bcc_repo_base}/bcc-stashes"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-stashes"
+
+  - action: download_github
+    name: bcc-craft
+    src: "${bcc_repo_base}/bcc-craft"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-craft"
+
+  - action: download_github
+    name: bcc-userlog
+    src: "${bcc_repo_base}/bcc-userlog"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-userlog"
+
+  - action: download_github
+    name: bcc-website
+    src: "${bcc_repo_base}/bcc-website"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-website"
+
+  - action: download_github
+    name: bcc-wagons
+    src: "${bcc_repo_base}/bcc-wagons"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-wagons"
+
+  - action: download_github
+    name: bcc-nazar
+    src: "${bcc_repo_base}/bcc-nazar"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-nazar"
+
+  - action: download_github
+    name: bcc-medical
+    src: "${bcc_repo_base}/bcc-medical"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-medical"
+
+  - action: download_github
+    name: bcc-housing
+    src: "${bcc_repo_base}/bcc-housing"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-housing"
+
+  - action: download_github
     name: bcc-customblips
     src: "${bcc_repo_base}/bcc-customblips"
     ref: "${branch}"
@@ -167,54 +159,76 @@ tasks:
     ref: "${branch}"
     dest: "${install_path}/bcc-doorlocks"
 
-  ########################################
-  # Utilidades y core
-  ########################################
   - action: download_github
     name: bcc-utils
     src: "${bcc_repo_base}/bcc-utils"
     ref: "${branch}"
     dest: "${install_path}/bcc-utils"
 
-  ########################################
-  # Ajustes finales
-  ########################################
-  - action: run_command
-    name: Ajustar permisos
-    command: |
-      chmod -R 755 ${install_path}
+  - action: download_github
+    name: bcc-crypt
+    src: "${bcc_repo_base}/bcc-crypt"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-crypt"
 
+  - action: download_github
+    name: bcc-acidtrip
+    src: "${bcc_repo_base}/bcc-acidtrip"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-acidtrip"
+
+  - action: download_github
+    name: bcc-serverpassword
+    src: "${bcc_repo_base}/bcc-serverpassword"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-serverpassword"
+
+  - action: download_github
+    name: bcc-blindfold
+    src: "${bcc_repo_base}/bcc-blindfold"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-blindfold"
+
+  - action: download_github
+    name: bcc-posse
+    src: "${bcc_repo_base}/bcc-posse"
+    ref: "${branch}"
+    dest: "${install_path}/bcc-posse"
+
+  ########################################
+  # Añadir ensures al server.cfg
+  ########################################
   - action: append_file_if_not_exists
-    name: Añadir ensures al server.cfg
     path: "${server_cfg_path}"
     content: |
-      -- Recursos BCC BryceCanyonCounty
+      # Recursos BCC
       ensure bcc-banks
+      ensure bcc-farming
+      ensure bcc-vehiclefixes
       ensure bcc-shops
       ensure bcc-society
-      ensure bcc-userlog
-      ensure bcc-stashes
-      ensure bcc-farming
       ensure bcc-ranch
-      ensure bcc-law
-      ensure bcc-robbery
-      ensure bcc-camp
-      ensure bcc-craft
-      ensure bcc-nazar
-      ensure bcc-housing
-      ensure bcc-medical
       ensure bcc-boats
       ensure bcc-stables
-      ensure bcc-wagons
-      ensure bcc-vehiclefixes
+      ensure bcc-law
       ensure bcc-guarma
       ensure bcc-water
       ensure bcc-bin
+      ensure bcc-robbery
+      ensure bcc-camp
+      ensure bcc-stashes
+      ensure bcc-craft
+      ensure bcc-userlog
+      ensure bcc-website
+      ensure bcc-wagons
+      ensure bcc-nazar
+      ensure bcc-medical
+      ensure bcc-housing
       ensure bcc-customblips
       ensure bcc-doorlocks
       ensure bcc-utils
-
-  - action: run_command
-    name: Mensaje final
-    command: |
-      echo "Instalación automática de scripts BCC completada. Revisa ${server_cfg_path} y configura según tus necesidades."
+      ensure bcc-crypt
+      ensure bcc-acidtrip
+      ensure bcc-serverpassword
+      ensure bcc-blindfold
+      ensure bcc-posse
