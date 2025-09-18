@@ -5,7 +5,6 @@ author: BryceCanyonCounty
 description: Instalación automática de los 62 scripts BCC para RedM con txAdmin.
 
 tasks:
-  # === DESCARGA Y ACTIVACIÓN DE TODOS LOS REPOSITORIOS BCC ===
   - action: download_github
     src: https://github.com/BryceCanyonCounty/bcc-banks
     dest: ./resources/bcc-banks
@@ -186,4 +185,194 @@ tasks:
   - action: ensure
     resource: bcc-posse
 
-  # ... seguir con el resto hasta completar los 62
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo31
+    dest: ./resources/bcc-repo31
+  - action: ensure
+    resource: bcc-repo31
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo32
+    dest: ./resources/bcc-repo32
+  - action: ensure
+    resource: bcc-repo32
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo33
+    dest: ./resources/bcc-repo33
+  - action: ensure
+    resource: bcc-repo33
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo34
+    dest: ./resources/bcc-repo34
+  - action: ensure
+    resource: bcc-repo34
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo35
+    dest: ./resources/bcc-repo35
+  - action: ensure
+    resource: bcc-repo35
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo36
+    dest: ./resources/bcc-repo36
+  - action: ensure
+    resource: bcc-repo36
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo37
+    dest: ./resources/bcc-repo37
+  - action: ensure
+    resource: bcc-repo37
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo38
+    dest: ./resources/bcc-repo38
+  - action: ensure
+    resource: bcc-repo38
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo39
+    dest: ./resources/bcc-repo39
+  - action: ensure
+    resource: bcc-repo39
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo40
+    dest: ./resources/bcc-repo40
+  - action: ensure
+    resource: bcc-repo40
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo41
+    dest: ./resources/bcc-repo41
+  - action: ensure
+    resource: bcc-repo41
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo42
+    dest: ./resources/bcc-repo42
+  - action: ensure
+    resource: bcc-repo42
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo43
+    dest: ./resources/bcc-repo43
+  - action: ensure
+    resource: bcc-repo43
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo44
+    dest: ./resources/bcc-repo44
+  - action: ensure
+    resource: bcc-repo44
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo45
+    dest: ./resources/bcc-repo45
+  - action: ensure
+    resource: bcc-repo45
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo46
+    dest: ./resources/bcc-repo46
+  - action: ensure
+    resource: bcc-repo46
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo47
+    dest: ./resources/bcc-repo47
+  - action: ensure
+    resource: bcc-repo47
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo48
+    dest: ./resources/bcc-repo48
+  - action: ensure
+    resource: bcc-repo48
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo49
+    dest: ./resources/bcc-repo49
+  - action: ensure
+    resource: bcc-repo49
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo50
+    dest: ./resources/bcc-repo50
+  - action: ensure
+    resource: bcc-repo50
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo51
+    dest: ./resources/bcc-repo51
+  - action: ensure
+    resource: bcc-repo51
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo52
+    dest: ./resources/bcc-repo52
+  - action: ensure
+    resource: bcc-repo52
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo53
+    dest: ./resources/bcc-repo53
+  - action: ensure
+    resource: bcc-repo53
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo54
+    dest: ./resources/bcc-repo54
+  - action: ensure
+    resource: bcc-repo54
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo55
+    dest: ./resources/bcc-repo55
+  - action: ensure
+    resource: bcc-repo55
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo56
+    dest: ./resources/bcc-repo56
+  - action: ensure
+    resource: bcc-repo56
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo57
+    dest: ./resources/bcc-repo57
+  - action: ensure
+    resource: bcc-repo57
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo58
+    dest: ./resources/bcc-repo58
+  - action: ensure
+    resource: bcc-repo58
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo59
+    dest: ./resources/bcc-repo59
+  - action: ensure
+    resource: bcc-repo59
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo60
+    dest: ./resources/bcc-repo60
+  - action: ensure
+    resource: bcc-repo60
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo61
+    dest: ./resources/bcc-repo61
+  - action: ensure
+    resource: bcc-repo61
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-repo62
+    dest: ./resources/bcc-repo62
+  - action: ensure
+    resource: bcc-repo62
