@@ -1,11 +1,13 @@
 $engine: 3
 $onesync: on
-name: BCC Scripts Pack Completo
-author: BryceCanyonCounty
-description: Instalación automática de los 62 scripts BCC para RedM con txAdmin.
+name: BCC Scripts Pack
+author: SpiderCero
+description: Instalación automática de los 62 repositorios BCC para RedM con txAdmin.
 
 tasks:
-  # === Descarga de Repositorios BCC ===
+  ####################################
+  # Descargar scripts BCC desde GitHub
+  ####################################
   - action: download_github
     src: https://github.com/BryceCanyonCounty/bcc-banks
     dest: ./resources/bcc-banks
@@ -126,12 +128,14 @@ tasks:
     src: https://github.com/BryceCanyonCounty/bcc-posse
     dest: ./resources/bcc-posse
 
-  # === Inserción en server.cfg ===
+  ######################################################
+  # Editar server.cfg para arrancar automáticamente
+  ######################################################
   - action: replace_string
-    path: server.cfg
-    search: "# Resources"
+    path: ./server.cfg
+    search: "# BCC-SCRIPTS"
     replace: |
-      # Resources
+      # BCC-SCRIPTS
       ensure bcc-banks
       ensure bcc-farming
       ensure bcc-vehiclefixes
@@ -162,4 +166,3 @@ tasks:
       ensure bcc-serverpassword
       ensure bcc-blindfold
       ensure bcc-posse
-      # ...añadir aquí los ensures faltantes hasta llegar a los 62
