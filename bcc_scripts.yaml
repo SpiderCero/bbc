@@ -128,6 +128,126 @@ tasks:
     src: https://github.com/BryceCanyonCounty/bcc-posse
     dest: ./resources/bcc-posse
 
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-telegram
+    dest: ./resources/bcc-telegram
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-mail
+    dest: ./resources/bcc-mail
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-pets
+    dest: ./resources/bcc-pets
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-mining
+    dest: ./resources/bcc-mining
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-blacksmith
+    dest: ./resources/bcc-blacksmith
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-fishing
+    dest: ./resources/bcc-fishing
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-coal
+    dest: ./resources/bcc-coal
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-saloons
+    dest: ./resources/bcc-saloons
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-delivery
+    dest: ./resources/bcc-delivery
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-gold
+    dest: ./resources/bcc-gold
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-trading
+    dest: ./resources/bcc-trading
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-newspapers
+    dest: ./resources/bcc-newspapers
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-trains
+    dest: ./resources/bcc-trains
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-doctor
+    dest: ./resources/bcc-doctor
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-postoffice
+    dest: ./resources/bcc-postoffice
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-lumber
+    dest: ./resources/bcc-lumber
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-hunting
+    dest: ./resources/bcc-hunting
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-weapons
+    dest: ./resources/bcc-weapons
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-herbs
+    dest: ./resources/bcc-herbs
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-bounty
+    dest: ./resources/bcc-bounty
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-poker
+    dest: ./resources/bcc-poker
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-treasures
+    dest: ./resources/bcc-treasures
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-animals
+    dest: ./resources/bcc-animals
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-weather
+    dest: ./resources/bcc-weather
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-trapper
+    dest: ./resources/bcc-trapper
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-gambling
+    dest: ./resources/bcc-gambling
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-gunsmith
+    dest: ./resources/bcc-gunsmith
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-towns
+    dest: ./resources/bcc-towns
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-barbershop
+    dest: ./resources/bcc-barbershop
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-butchers
+    dest: ./resources/bcc-butchers
+
   ######################################################
   # Editar server.cfg para arrancar automáticamente
   ######################################################
@@ -166,3 +286,33 @@ tasks:
       ensure bcc-serverpassword
       ensure bcc-blindfold
       ensure bcc-posse
+      ensure bcc-telegram
+      ensure bcc-mail
+      ensure bcc-pets
+      ensure bcc-mining
+      ensure bcc-blacksmith
+      ensure bcc-fishing
+      ensure bcc-coal
+      ensure bcc-saloons
+      ensure bcc-delivery
+      ensure bcc-gold
+      ensure bcc-trading
+      ensure bcc-newspapers
+      ensure bcc-trains
+      ensure bcc-doctor
+      ensure bcc-postoffice
+      ensure bcc-lumber
+      ensure bcc-hunting
+      ensure bcc-weapons
+      ensure bcc-herbs
+      ensure bcc-bounty
+      ensure bcc-poker
+      ensure bcc-treasures
+      ensure bcc-animals
+      ensure bcc-weather
+      ensure bcc-trapper
+      ensure bcc-gambling
+      ensure bcc-gunsmith
+      ensure bcc-towns
+      ensure bcc-barbershop
+      ensure bcc-butchers
