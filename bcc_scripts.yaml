@@ -1,234 +1,187 @@
 $engine: 3
 $onesync: on
-$steamRequired: true
-name: BCC-Scripts-AutoInstall
+name: BCC Scripts Pack
 author: BryceCanyonCounty
-description: Instalación automática de todos los scripts BCC desde BryceCanyonCounty
-
-variables:
-  branch: "main"
-  install_path: "resources"
-  bcc_repo_base: "https://github.com/BryceCanyonCounty"
-  server_cfg_path: "server.cfg"
+description: Instalación automática de los scripts BCC para RedM con txAdmin.
 
 tasks:
-  ########################################
-  # Repositorios BCC
-  ########################################
+  # === Descarga de Repositorios BCC ===
   - action: download_github
-    name: bcc-banks
-    src: "${bcc_repo_base}/bcc-banks"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-banks"
+    src: https://github.com/BryceCanyonCounty/bcc-banks
+    dest: ./resources/bcc-banks
+  - action: ensure
+    resource: bcc-banks
 
   - action: download_github
-    name: bcc-farming
-    src: "${bcc_repo_base}/bcc-farming"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-farming"
+    src: https://github.com/BryceCanyonCounty/bcc-farming
+    dest: ./resources/bcc-farming
+  - action: ensure
+    resource: bcc-farming
 
   - action: download_github
-    name: bcc-vehiclefixes
-    src: "${bcc_repo_base}/bcc-vehiclefixes"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-vehiclefixes"
+    src: https://github.com/BryceCanyonCounty/bcc-vehiclefixes
+    dest: ./resources/bcc-vehiclefixes
+  - action: ensure
+    resource: bcc-vehiclefixes
 
   - action: download_github
-    name: bcc-shops
-    src: "${bcc_repo_base}/bcc-shops"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-shops"
+    src: https://github.com/BryceCanyonCounty/bcc-shops
+    dest: ./resources/bcc-shops
+  - action: ensure
+    resource: bcc-shops
 
   - action: download_github
-    name: bcc-society
-    src: "${bcc_repo_base}/bcc-society"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-society"
+    src: https://github.com/BryceCanyonCounty/bcc-society
+    dest: ./resources/bcc-society
+  - action: ensure
+    resource: bcc-society
 
   - action: download_github
-    name: bcc-ranch
-    src: "${bcc_repo_base}/bcc-ranch"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-ranch"
+    src: https://github.com/BryceCanyonCounty/bcc-ranch
+    dest: ./resources/bcc-ranch
+  - action: ensure
+    resource: bcc-ranch
 
   - action: download_github
-    name: bcc-boats
-    src: "${bcc_repo_base}/bcc-boats"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-boats"
+    src: https://github.com/BryceCanyonCounty/bcc-boats
+    dest: ./resources/bcc-boats
+  - action: ensure
+    resource: bcc-boats
 
   - action: download_github
-    name: bcc-stables
-    src: "${bcc_repo_base}/bcc-stables"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-stables"
+    src: https://github.com/BryceCanyonCounty/bcc-stables
+    dest: ./resources/bcc-stables
+  - action: ensure
+    resource: bcc-stables
 
   - action: download_github
-    name: bcc-law
-    src: "${bcc_repo_base}/bcc-law"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-law"
+    src: https://github.com/BryceCanyonCounty/bcc-law
+    dest: ./resources/bcc-law
+  - action: ensure
+    resource: bcc-law
 
   - action: download_github
-    name: bcc-guarma
-    src: "${bcc_repo_base}/bcc-guarma"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-guarma"
+    src: https://github.com/BryceCanyonCounty/bcc-guarma
+    dest: ./resources/bcc-guarma
+  - action: ensure
+    resource: bcc-guarma
 
   - action: download_github
-    name: bcc-water
-    src: "${bcc_repo_base}/bcc-water"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-water"
+    src: https://github.com/BryceCanyonCounty/bcc-water
+    dest: ./resources/bcc-water
+  - action: ensure
+    resource: bcc-water
 
   - action: download_github
-    name: bcc-bin
-    src: "${bcc_repo_base}/bcc-bin"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-bin"
+    src: https://github.com/BryceCanyonCounty/bcc-bin
+    dest: ./resources/bcc-bin
+  - action: ensure
+    resource: bcc-bin
 
   - action: download_github
-    name: bcc-robbery
-    src: "${bcc_repo_base}/bcc-robbery"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-robbery"
+    src: https://github.com/BryceCanyonCounty/bcc-robbery
+    dest: ./resources/bcc-robbery
+  - action: ensure
+    resource: bcc-robbery
 
   - action: download_github
-    name: bcc-camp
-    src: "${bcc_repo_base}/bcc-camp"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-camp"
+    src: https://github.com/BryceCanyonCounty/bcc-camp
+    dest: ./resources/bcc-camp
+  - action: ensure
+    resource: bcc-camp
 
   - action: download_github
-    name: bcc-stashes
-    src: "${bcc_repo_base}/bcc-stashes"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-stashes"
+    src: https://github.com/BryceCanyonCounty/bcc-stashes
+    dest: ./resources/bcc-stashes
+  - action: ensure
+    resource: bcc-stashes
 
   - action: download_github
-    name: bcc-craft
-    src: "${bcc_repo_base}/bcc-craft"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-craft"
+    src: https://github.com/BryceCanyonCounty/bcc-craft
+    dest: ./resources/bcc-craft
+  - action: ensure
+    resource: bcc-craft
 
   - action: download_github
-    name: bcc-userlog
-    src: "${bcc_repo_base}/bcc-userlog"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-userlog"
+    src: https://github.com/BryceCanyonCounty/bcc-userlog
+    dest: ./resources/bcc-userlog
+  - action: ensure
+    resource: bcc-userlog
 
   - action: download_github
-    name: bcc-website
-    src: "${bcc_repo_base}/bcc-website"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-website"
+    src: https://github.com/BryceCanyonCounty/bcc-website
+    dest: ./resources/bcc-website
+  - action: ensure
+    resource: bcc-website
 
   - action: download_github
-    name: bcc-wagons
-    src: "${bcc_repo_base}/bcc-wagons"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-wagons"
+    src: https://github.com/BryceCanyonCounty/bcc-wagons
+    dest: ./resources/bcc-wagons
+  - action: ensure
+    resource: bcc-wagons
 
   - action: download_github
-    name: bcc-nazar
-    src: "${bcc_repo_base}/bcc-nazar"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-nazar"
+    src: https://github.com/BryceCanyonCounty/bcc-nazar
+    dest: ./resources/bcc-nazar
+  - action: ensure
+    resource: bcc-nazar
 
   - action: download_github
-    name: bcc-medical
-    src: "${bcc_repo_base}/bcc-medical"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-medical"
+    src: https://github.com/BryceCanyonCounty/bcc-medical
+    dest: ./resources/bcc-medical
+  - action: ensure
+    resource: bcc-medical
 
   - action: download_github
-    name: bcc-housing
-    src: "${bcc_repo_base}/bcc-housing"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-housing"
+    src: https://github.com/BryceCanyonCounty/bcc-housing
+    dest: ./resources/bcc-housing
+  - action: ensure
+    resource: bcc-housing
 
   - action: download_github
-    name: bcc-customblips
-    src: "${bcc_repo_base}/bcc-customblips"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-customblips"
+    src: https://github.com/BryceCanyonCounty/bcc-customblips
+    dest: ./resources/bcc-customblips
+  - action: ensure
+    resource: bcc-customblips
 
   - action: download_github
-    name: bcc-doorlocks
-    src: "${bcc_repo_base}/bcc-doorlocks"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-doorlocks"
+    src: https://github.com/BryceCanyonCounty/bcc-doorlocks
+    dest: ./resources/bcc-doorlocks
+  - action: ensure
+    resource: bcc-doorlocks
 
   - action: download_github
-    name: bcc-utils
-    src: "${bcc_repo_base}/bcc-utils"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-utils"
+    src: https://github.com/BryceCanyonCounty/bcc-utils
+    dest: ./resources/bcc-utils
+  - action: ensure
+    resource: bcc-utils
 
   - action: download_github
-    name: bcc-crypt
-    src: "${bcc_repo_base}/bcc-crypt"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-crypt"
+    src: https://github.com/BryceCanyonCounty/bcc-crypt
+    dest: ./resources/bcc-crypt
+  - action: ensure
+    resource: bcc-crypt
 
   - action: download_github
-    name: bcc-acidtrip
-    src: "${bcc_repo_base}/bcc-acidtrip"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-acidtrip"
+    src: https://github.com/BryceCanyonCounty/bcc-acidtrip
+    dest: ./resources/bcc-acidtrip
+  - action: ensure
+    resource: bcc-acidtrip
 
   - action: download_github
-    name: bcc-serverpassword
-    src: "${bcc_repo_base}/bcc-serverpassword"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-serverpassword"
+    src: https://github.com/BryceCanyonCounty/bcc-serverpassword
+    dest: ./resources/bcc-serverpassword
+  - action: ensure
+    resource: bcc-serverpassword
 
   - action: download_github
-    name: bcc-blindfold
-    src: "${bcc_repo_base}/bcc-blindfold"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-blindfold"
+    src: https://github.com/BryceCanyonCounty/bcc-blindfold
+    dest: ./resources/bcc-blindfold
+  - action: ensure
+    resource: bcc-blindfold
 
   - action: download_github
-    name: bcc-posse
-    src: "${bcc_repo_base}/bcc-posse"
-    ref: "${branch}"
-    dest: "${install_path}/bcc-posse"
-
-  ########################################
-  # Añadir ensures al server.cfg
-  ########################################
-  - action: append_file_if_not_exists
-    path: "${server_cfg_path}"
-    content: |
-      # Recursos BCC
-      ensure bcc-banks
-      ensure bcc-farming
-      ensure bcc-vehiclefixes
-      ensure bcc-shops
-      ensure bcc-society
-      ensure bcc-ranch
-      ensure bcc-boats
-      ensure bcc-stables
-      ensure bcc-law
-      ensure bcc-guarma
-      ensure bcc-water
-      ensure bcc-bin
-      ensure bcc-robbery
-      ensure bcc-camp
-      ensure bcc-stashes
-      ensure bcc-craft
-      ensure bcc-userlog
-      ensure bcc-website
-      ensure bcc-wagons
-      ensure bcc-nazar
-      ensure bcc-medical
-      ensure bcc-housing
-      ensure bcc-customblips
-      ensure bcc-doorlocks
-      ensure bcc-utils
-      ensure bcc-crypt
-      ensure bcc-acidtrip
-      ensure bcc-serverpassword
-      ensure bcc-blindfold
-      ensure bcc-posse
+    src: https://github.com/BryceCanyonCounty/bcc-posse
+    dest: ./resources/bcc-posse
+  - action: ensure
+    resource: bcc-posse
